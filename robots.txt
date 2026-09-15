@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.seguricasa-sevilla.es/sitemap.xml

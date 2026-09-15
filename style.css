@@ -1,0 +1,214 @@
+:root {
+  --bg: #EEF2F5;
+  --bg-dark: #1B2430;
+  --bg-darker: #0F151C;
+  --text: #16202B;
+  --text-soft: #47576A;
+  --accent: #E3A857;
+  --accent-dark: #C98A38;
+  --line: #D6DEE3;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+.wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.15;
+  margin: 0 0 16px;
+  color: var(--text);
+}
+
+h1 { font-size: clamp(32px, 5vw, 48px); font-weight: 700; }
+h2 { font-size: clamp(24px, 3vw, 32px); }
+h3 { font-size: 19px; }
+
+p { margin: 0 0 16px; color: var(--text-soft); max-width: 60ch; }
+
+a { color: inherit; }
+
+/* ---------- Header ---------- */
+.site-header {
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.site-header nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  font-size: 15px;
+}
+
+.site-header nav a {
+  text-decoration: none;
+  color: var(--text-soft);
+}
+
+.nav-cta {
+  background: var(--accent);
+  color: var(--bg-darker) !important;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  background: var(--bg-dark);
+  color: #F4F6F7;
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 48px;
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.hero h1 { color: #F4F6F7; max-width: 16ch; }
+
+.hero-lead {
+  color: #B9C4CC;
+  font-size: 18px;
+  max-width: 42ch;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--bg-darker);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 13px 26px;
+  border-radius: 4px;
+  margin-top: 8px;
+}
+
+.btn-primary:hover { background: var(--accent-dark); }
+
+.hero-graphic svg { width: 100%; height: auto; }
+
+/* ---------- Servicios ---------- */
+.servicios { padding: 72px 0; }
+
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.servicio-card {
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  padding: 22px 24px;
+  background: #F8FAFB;
+}
+
+.servicio-card p { margin: 0; }
+
+/* ---------- Por qué ---------- */
+.por-que {
+  background: #E4EAED;
+  padding: 64px 0;
+}
+
+.por-que-inner { max-width: 720px; }
+.por-que p { max-width: 70ch; font-size: 17px; }
+
+/* ---------- Zona ---------- */
+.zona { padding: 56px 0; }
+
+/* ---------- FAQ ---------- */
+.faq { padding: 56px 0 72px; }
+
+.faq details {
+  border-bottom: 1px solid var(--line);
+  padding: 16px 0;
+}
+
+.faq summary {
+  font-family: var(--font-display);
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.faq details p { margin-top: 12px; }
+
+/* ---------- Contacto ---------- */
+.contacto {
+  background: var(--bg-darker);
+  color: #F4F6F7;
+  padding: 72px 0;
+  text-align: left;
+}
+
+.contacto-inner { max-width: 520px; }
+.contacto h2 { color: #F4F6F7; }
+.contacto p { color: #B9C4CC; }
+
+/* ---------- Footer ---------- */
+.site-footer {
+  padding: 24px 0;
+  border-top: 1px solid var(--line);
+}
+
+.site-footer p {
+  font-size: 13px;
+  color: var(--text-soft);
+  margin: 0;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 760px) {
+  .hero-inner { grid-template-columns: 1fr; padding-top: 48px; padding-bottom: 48px; }
+  .servicios-grid { grid-template-columns: 1fr; }
+  .site-header nav { gap: 14px; font-size: 13px; }
+}
